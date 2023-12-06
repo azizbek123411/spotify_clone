@@ -9,7 +9,7 @@ class HomeAlbums extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          margin: const EdgeInsets.only(top: 10,right: 10,
+          margin: const EdgeInsets.only(top: 10,right: 15,
           bottom: 5),
           height: 155,
           width: 155,
@@ -24,7 +24,7 @@ class HomeAlbums extends StatelessWidget {
           ),
         ),
         const Text(
-          'Eminem,2Pac,\n Ed Sheeran ',
+          'Eminem,2Pac,\nEd Sheeran ',
           style: TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w500,

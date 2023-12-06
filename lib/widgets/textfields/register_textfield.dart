@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class RegisterTextfield extends StatelessWidget {
   const RegisterTextfield({super.key});
 
@@ -9,9 +10,9 @@ class RegisterTextfield extends StatelessWidget {
       height: 51,
       decoration: BoxDecoration(
         color: Colors.grey,
-        borderRadius: BorderRadius.circular(6)
+        borderRadius: BorderRadius.circular(6),
       ),
-      child: TextField(
+      child: const TextField(
         decoration: InputDecoration(
           border: InputBorder.none,
           contentPadding: EdgeInsets.all(12),

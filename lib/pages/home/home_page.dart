@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
-import 'package:spotify_clone/widgets/home_widgets/albums.dart';
+import 'package:spotify_clone/pages/library/profilea_page.dart';
+
+import '../../widgets/home_widgets/albums.dart';
 
 class HomePage extends StatefulWidget {
   static const String id = 'home';
@@ -12,23 +14,27 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int selectedIndex=0;
-  void ontTappedIndex(int index){
-    setState(() {
-      selectedIndex=index;
-    });
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xff121212),
       appBar: AppBar(
-        leading: const CircleAvatar(
-          backgroundColor: Colors.black,
-          child: Icon(
-            Icons.account_circle_rounded,
-            size: 34,
-            color: Colors.white,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const Profilepage(),
+              ),
+            );
+          },
+          child: const CircleAvatar(
+            backgroundColor: Colors.black,
+            child: Icon(
+              Icons.account_circle_rounded,
+              size: 34,
+              color: Colors.white,
+            ),
           ),
         ),
         actions: [
@@ -109,11 +115,14 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 20,
             ),
-            Text('In New Year', style: TextStyle(
-              color: Colors.white,
-              fontSize: 19,
-              fontWeight: FontWeight.w700,
-            ),),
+            Text(
+              'In New Year',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 19,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
             Row(
               children: [
                 Poster(),
@@ -127,7 +136,8 @@ class _HomePageState extends State<HomePage> {
                 fontSize: 19,
                 fontWeight: FontWeight.w700,
               ),
-            ),  SingleChildScrollView(
+            ),
+            SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
@@ -143,26 +153,6 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: ontTappedIndex,
-        currentIndex: selectedIndex,
-        backgroundColor: const Color(0xff121212),
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.grey,
-          items:[
-            BottomNavigationBarItem(
-                icon: Icon(IconlyLight.home),
-              label: "Home"
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(IconlyLight.search),
-              label: 'Search'
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.library_music_sharp),
-                label: 'Search'
-            ),
-          ],),
     );
   }
 }

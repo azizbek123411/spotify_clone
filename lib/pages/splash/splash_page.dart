@@ -11,7 +11,12 @@ class Splashpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Timer(const Duration(seconds: 2), () {
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>const Register(),),);
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const Register(),
+        ),
+      );
     });
     return Scaffold(
       backgroundColor: Colors.black,

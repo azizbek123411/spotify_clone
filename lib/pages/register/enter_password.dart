@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/pages/home/home_page.dart';
+import 'package:spotify_clone/pages/main_page.dart';
 import 'package:spotify_clone/widgets/register/register_next_button.dart';
-import 'package:spotify_clone/widgets/register/register_textfield.dart';
+import 'package:spotify_clone/widgets/textfields/register_textfield.dart';
 
 class EnterPassword extends StatelessWidget {
   const EnterPassword({
@@ -70,7 +70,7 @@ class EnterPassword extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (cont) => const HomePage(),
+                        builder: (cont) => const MainPage(),
                       ),
                     );
                   },

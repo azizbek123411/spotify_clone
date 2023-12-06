@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/pages/register/enter_password.dart';
 import 'package:spotify_clone/widgets/register/register_next_button.dart';
-import 'package:spotify_clone/widgets/register/register_textfield.dart';
+import 'package:spotify_clone/widgets/textfields/register_textfield.dart';
 
 class EnterEmail extends StatelessWidget {
   const EnterEmail({super.key});
