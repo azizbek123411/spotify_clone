@@ -8,18 +8,21 @@ class HomeAlbums extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          margin: const EdgeInsets.only(top: 10,right: 15,
-          bottom: 5),
-          height: 155,
-          width: 155,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
-            image: const DecorationImage(
-              image: AssetImage(
-                'assets/images/album_cover.png',
+        GestureDetector(
+          onTap: (){},
+          child: Container(
+            margin: const EdgeInsets.only(top: 10,right: 15,
+            bottom: 5),
+            height: 155,
+            width: 155,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              image: const DecorationImage(
+                image: AssetImage(
+                  'assets/images/album_cover.png',
+                ),
+                fit: BoxFit.cover,
               ),
-              fit: BoxFit.cover,
             ),
           ),
         ),

@@ -4,6 +4,7 @@ import 'package:spotify_clone/widgets/register/register_next_button.dart';
 import 'package:spotify_clone/widgets/textfields/register_textfield.dart';
 
 class EnterPassword extends StatelessWidget {
+  static const String id='password';
   const EnterPassword({
     super.key,
   });
@@ -67,12 +68,7 @@ class EnterPassword extends StatelessWidget {
               children: [
                 NextButton(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (cont) => const MainPage(),
-                      ),
-                    );
+                    Navigator.pushReplacementNamed(context, MainPage.id,);
                   },
                 ),
               ],

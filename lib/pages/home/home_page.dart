@@ -129,6 +129,9 @@ class _HomePageState extends State<HomePage> {
                 Poster(),
               ],
             ),
+            SizedBox(
+              height: 20,
+            ),
             Text(
               'Popular albums',
               style: TextStyle(
