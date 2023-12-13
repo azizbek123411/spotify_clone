@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/pages/main_page.dart';
+import 'package:spotify_clone/pages/register/register_page.dart';
 import 'package:spotify_clone/pages/splash/splash_page.dart';
 
 void main() async{
@@ -16,11 +17,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // initialRoute: Splashpage.id,
+      initialRoute: Splashpage.id,
       home: const MainPage(),
       routes: {
         Splashpage.id:(context)=>const Splashpage(),
         MainPage.id:(context)=>const MainPage(),
+        Register.id:(context)=>const Register(),
       },
     );
   }

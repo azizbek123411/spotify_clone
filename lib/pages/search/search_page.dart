@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 
 import '../../widgets/search_page_widgets/top_genre_widget.dart';
-import '../../widgets/textfields/search_textfield.dart';
+import '../../widgets/search_page_widgets/search_textfield.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -12,6 +12,7 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

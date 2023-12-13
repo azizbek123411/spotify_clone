@@ -3,6 +3,7 @@ import 'package:spotify_clone/pages/register/enter_email.dart';
 import 'package:spotify_clone/widgets/register/register_butoons.dart';
 
 class Register extends StatelessWidget {
+  static const String id='/register';
   const Register({super.key});
 
   @override
